@@ -265,7 +265,8 @@ class S3Boto3Storage(Storage):
                 region_name=self.region_name,
                 use_ssl=self.use_ssl,
                 endpoint_url=self.endpoint_url,
-                config=self.config
+                config=self.config,
+                verify=False,
             )
         return self._connections.connection
 
