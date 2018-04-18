@@ -266,7 +266,7 @@ class S3Boto3Storage(Storage):
                 use_ssl=self.use_ssl,
                 endpoint_url=self.endpoint_url,
                 config=self.config,
-                verify=False,
+                verify=setting('YANDEX_ROOT_CERTIFICATE', False),
             )
         return self._connections.connection
 
